@@ -1,0 +1,63 @@
+﻿/**
+ * Page-specific styles for student-settings.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+.student-settings-page { max-width: 800px; margin: 0 auto; padding: 20px; }
+.page-header-clean { margin-bottom: 28px; }
+.page-header-clean h1 { font-size: 1.8rem; margin: 8px 0 0; }
+.back-link { color: #45644A; font-size: 0.95rem; }
+
+.settings-card { background: #fff; border: 2px solid #E4DBC4; border-radius: 16px; margin-bottom: 20px; overflow: hidden; }
+.settings-card-header { display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: #f9f6ef; border-bottom: 1px solid #E4DBC4; }
+.settings-icon { font-size: 2rem; width: 48px; text-align: center; }
+.settings-card-header h2 { margin: 0 0 4px; font-size: 1.1rem; color: #18442A; }
+.settings-card-header p { margin: 0; font-size: 0.85rem; color: #45644A; }
+.settings-card-body { padding: 20px 24px; }
+.settings-card-danger { border-color: #f8d7da; }
+.settings-card-danger .settings-card-header { background: #fff5f5; }
+
+.settings-option-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.settings-option { display: flex; gap: 10px; align-items: flex-start; border: 1px solid #e7e1d3; border-radius: 12px; padding: 14px; color: inherit; background: #fff; transition: border-color .2s ease, box-shadow .2s ease; }
+.settings-option:hover { border-color: #18442A; box-shadow: 0 4px 14px rgba(24,68,42,0.08); }
+.settings-option-icon { font-size: 1.4rem; line-height: 1; }
+.settings-option strong { display: block; color: #18442A; margin-bottom: 4px; }
+.settings-option p { margin: 0; font-size: .84rem; color: #5f695f; }
+
+.contracts-empty { background: #f8f6f0; border: 1px dashed #d7ccb2; border-radius: 12px; padding: 18px; }
+.contracts-empty p { margin: 8px 0 16px; color: #5f695f; }
+.contracts-grid { display: grid; gap: 14px; }
+.contract-card { border: 1px solid #e7e1d3; border-radius: 12px; padding: 14px; background: #fff; }
+.contract-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+.contract-head h3 { margin: 0; color: #18442A; font-size: 1.02rem; }
+.contract-status { background: #e8f5e9; color: #18442A; border-radius: 999px; padding: 4px 10px; font-size: .78rem; font-weight: 700; }
+.contract-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.contract-meta span { display: block; font-size: .75rem; color: #6d756d; margin-bottom: 3px; }
+.contract-meta strong { color: #1f2f25; font-size: .88rem; }
+
+
+.freeze-active-notice { display: flex; align-items: center; gap: 16px; padding: 16px; background: #e8f5e9; border-radius: 12px; border: 2px solid #18442A; }
+.freeze-icon { font-size: 2rem; }
+.freeze-active-notice strong { display: block; color: #18442A; margin-bottom: 4px; }
+
+.btn-outline { display: inline-block; padding: 12px 24px; border: 2px solid #18442A; color: #18442A; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+.btn-outline:hover { background: #18442A; color: #fff; }
+.btn-oval { border-radius: 50px !important; }
+.btn-danger-outline { display: inline-block; padding: 12px 24px; border: 2px solid #dc3545; color: #dc3545; background: transparent; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.btn-danger-outline:hover { background: #dc3545; color: #fff; }
+.btn-danger { display: inline-block; padding: 12px 24px; background: #dc3545; color: #fff; border: 2px solid #dc3545; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.btn-secondary { display: inline-block; padding: 12px 24px; background: #E4DBC4; color: #18442A; border: 2px solid #E4DBC4; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+/* Popup */
+.popup-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 9999; display: none; align-items: center; justify-content: center; }
+.popup-card { background: #fff; border-radius: 20px; padding: 0; width: 90%; max-width: 480px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+.popup-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: #fff5f5; border-bottom: 1px solid #f8d7da; }
+.popup-header h3 { margin: 0; color: #dc3545; }
+.popup-close { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #666; }
+.popup-body { padding: 24px; text-align: center; }
+.popup-warning-icon { font-size: 3rem; margin-bottom: 12px; }
+.popup-body h4 { margin-bottom: 16px; color: #333; }
+.delete-info-list { text-align: left; margin: 0 0 20px; padding: 0 0 0 20px; color: #555; font-size: 0.9rem; line-height: 1.8; }
+.popup-confirm-text { font-size: 0.9rem; color: #555; margin-bottom: 8px; }
+.popup-footer { display: flex; gap: 12px; justify-content: flex-end; padding: 16px 24px; background: #f9f9f9; border-top: 1px solid #eee; }
+

@@ -1,0 +1,369 @@
+﻿/**
+ * Page-specific styles for create-fund.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Page Layout أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-page { padding: 28px; max-width: 1200px; margin: 0 auto; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Hero Banner أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-hero {
+    background: linear-gradient(135deg, #18442a 0%, #2d5a3d 60%, #45644a 100%);
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 8px 32px rgba(24,68,42,0.22);
+    position: relative;
+    overflow: hidden;
+}
+.cf-hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(228,219,196,0.08);
+}
+.cf-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 30%;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(228,219,196,0.05);
+}
+.cf-hero-left { position: relative; z-index: 1; }
+.cf-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(228,219,196,0.18);
+    border: 1px solid rgba(228,219,196,0.35);
+    border-radius: 50px;
+    padding: 4px 14px;
+    font-size: 0.78rem;
+    color: #e4dbc4;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.cf-hero h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+.cf-hero p { color: rgba(255,255,255,0.7); margin: 0; font-size: 0.95rem; }
+.cf-hero-right {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 14px;
+    padding: 18px 24px;
+    min-width: 220px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.cf-manager-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.cf-manager-name { color: #fff; font-weight: 600; font-size: 1rem; margin-bottom: 10px; }
+.cf-manager-meta { display: flex; gap: 16px; }
+.cf-manager-chip {
+    display: flex; flex-direction: column;
+    font-size: 0.78rem; color: rgba(255,255,255,0.6);
+}
+.cf-manager-chip strong { color: #e4dbc4; font-size: 0.85rem; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Steps Progress أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 28px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 24px;
+    box-shadow: 0 2px 12px rgba(24,68,42,0.07);
+}
+.cf-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    cursor: pointer;
+    padding: 8px 0;
+}
+.cf-step-num {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.85rem;
+    background: #e4dbc4;
+    color: #45644a;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+.cf-step.active .cf-step-num {
+    background: #18442a;
+    color: #fff;
+    box-shadow: 0 3px 12px rgba(24,68,42,0.3);
+}
+.cf-step.done .cf-step-num {
+    background: #45644a;
+    color: #fff;
+}
+.cf-step-info { display: flex; flex-direction: column; }
+.cf-step-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.6px; }
+.cf-step-title { font-size: 0.88rem; font-weight: 600; color: #18442a; }
+.cf-step:not(.active) .cf-step-title { color: #888; }
+.cf-step-sep {
+    flex: 0 0 32px;
+    height: 2px;
+    background: #e4dbc4;
+    margin: 0 4px;
+}
+.cf-step.done + .cf-step-sep { background: #45644a; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Main Card أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(24,68,42,0.08);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.cf-step-panel {
+    display: none;
+}
+
+.cf-step-panel[data-panel="1"] {
+    display: block;
+}
+.cf-card-header {
+    background: linear-gradient(135deg, #f8f5f0 0%, #fff 100%);
+    border-bottom: 1px solid #f0ebe0;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.cf-card-icon {
+    width: 46px; height: 46px;
+    background: #18442a;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.cf-card-header h2 { margin: 0; font-size: 1.15rem; color: #18442a; }
+.cf-card-header p { margin: 0; font-size: 0.83rem; color: #888; }
+.cf-card-body { padding: 28px; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Form Grid أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.cf-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.cf-full { grid-column: 1 / -1; }
+
+.cf-field { display: flex; flex-direction: column; gap: 6px; }
+.cf-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #2d5a3d;
+    letter-spacing: 0.3px;
+}
+.cf-label span.req { color: #c0392b; margin-left: 2px; }
+.cf-input, .cf-select, .cf-textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e0d9cc;
+    border-radius: 10px;
+    font-size: 0.93rem;
+    color: #18442a;
+    background: #fafaf7;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cf-input:focus, .cf-select:focus, .cf-textarea:focus {
+    outline: none;
+    border-color: #18442a;
+    box-shadow: 0 0 0 3px rgba(24,68,42,0.1);
+    background: #fff;
+}
+.cf-input::placeholder, .cf-textarea::placeholder { color: #bbb; }
+.cf-select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2318442a'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 36px; }
+.cf-textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Input with suffix أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-input-wrap { position: relative; display: flex; align-items: center; }
+.cf-input-wrap .cf-input { padding-right: 52px; }
+.cf-suffix {
+    position: absolute; right: 12px;
+    font-size: 0.8rem; font-weight: 600;
+    color: #45644a;
+    background: #eef5f0;
+    padding: 3px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Risk Picker أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-risk-group { display: flex; gap: 10px; }
+.cf-risk-opt {
+    flex: 1;
+    border: 2px solid #e0d9cc;
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+.cf-risk-opt input[type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+.cf-risk-opt .risk-icon { font-size: 1.3rem; display: block; margin-bottom: 4px; }
+.cf-risk-opt .risk-text { font-size: 0.82rem; font-weight: 600; color: #666; }
+.cf-risk-opt.low-opt:has(input:checked)  { border-color: #27ae60; background: #eafaf1; }
+.cf-risk-opt.low-opt:has(input:checked) .risk-text { color: #27ae60; }
+.cf-risk-opt.med-opt:has(input:checked)  { border-color: #f39c12; background: #fef9ef; }
+.cf-risk-opt.med-opt:has(input:checked) .risk-text { color: #d68910; }
+.cf-risk-opt.high-opt:has(input:checked) { border-color: #e74c3c; background: #fdf2f0; }
+.cf-risk-opt.high-opt:has(input:checked) .risk-text { color: #c0392b; }
+.cf-risk-opt:hover { border-color: #18442a; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Hint text أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-hint { font-size: 0.76rem; color: #999; margin-top: 2px; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Return type cards أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-return-group { display: flex; gap: 10px; }
+.cf-return-opt {
+    flex: 1;
+    border: 2px solid #e0d9cc;
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+.cf-return-opt input[type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+.cf-return-opt .ret-icon { font-size: 1.2rem; margin-bottom: 4px; display: block; }
+.cf-return-opt .ret-text { font-size: 0.8rem; font-weight: 600; color: #666; }
+.cf-return-opt:has(input:checked) { border-color: #18442a; background: #eef5f0; }
+.cf-return-opt:has(input:checked) .ret-text { color: #18442a; }
+.cf-return-opt:hover { border-color: #45644a; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Checklist أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-checks { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+.cf-check {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: #f8f5f0; border-radius: 10px; padding: 14px 16px;
+    border: 1.5px solid transparent; cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+.cf-check:has(input:checked) { border-color: #18442a; background: #eef5f0; }
+.cf-check input[type=checkbox] { margin-top: 2px; accent-color: #18442a; width: 16px; height: 16px; flex-shrink: 0; }
+.cf-check-text strong { font-size: 0.88rem; color: #18442a; display: block; }
+.cf-check-text span { font-size: 0.78rem; color: #888; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Live Preview Card أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-preview-card {
+    background: linear-gradient(145deg, #18442a 0%, #2d5a3d 100%);
+    border-radius: 16px;
+    padding: 24px;
+    color: #fff;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 8px 28px rgba(24,68,42,0.25);
+}
+.cf-preview-card h3 { color: #e4dbc4; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+.cf-preview-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+.cf-preview-id { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 16px; }
+.cf-preview-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.cf-preview-row:last-child { border-bottom: none; }
+.cf-preview-key { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
+.cf-preview-val { font-size: 0.88rem; font-weight: 600; color: #e4dbc4; }
+.cf-preview-risk {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+.cf-preview-risk.low  { background: rgba(39,174,96,0.25);  color: #7ee8a2; }
+.cf-preview-risk.med  { background: rgba(243,156,18,0.25);  color: #ffd07b; }
+.cf-preview-risk.high { background: rgba(231,76,60,0.25);   color: #ff9a9e; }
+.cf-preview-type-tag {
+    display: inline-block;
+    background: rgba(228,219,196,0.15);
+    border: 1px solid rgba(228,219,196,0.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    color: #e4dbc4;
+    margin-bottom: 14px;
+}
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Two-column layout أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-layout { display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Form Actions أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 28px;
+    background: #f8f5f0;
+    border-top: 1px solid #f0ebe0;
+}
+.cf-btn-cancel {
+    display: flex; align-items: center; gap: 8px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+.cf-btn-cancel:hover { border-color: #18442a; color: #18442a; }
+.cf-btn-submit {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: #18442a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(24,68,42,0.3);
+    transition: all 0.2s ease;
+}
+.cf-btn-submit:hover { background: #2d5a3d; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(24,68,42,0.35); }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Section divider أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+.cf-section-sep { border: none; border-top: 1px solid #f0ebe0; margin: 24px 0; }
+
+/* أ¢â€‌â‚¬أ¢â€‌â‚¬ Responsive أ¢â€‌â‚¬أ¢â€‌â‚¬ */
+@media (max-width: 900px) {
+    .cf-layout { grid-template-columns: 1fr; }
+    .cf-preview-card { position: static; }
+    .cf-grid { grid-template-columns: 1fr; }
+    .cf-grid-3 { grid-template-columns: 1fr 1fr; }
+    .cf-hero { flex-direction: column; align-items: flex-start; }
+    .cf-steps { overflow-x: auto; gap: 4px; }
+    .cf-step-sep { flex: 0 0 16px; }
+}
+@media (max-width: 560px) {
+    .cf-page { padding: 16px; }
+    .cf-grid-3 { grid-template-columns: 1fr; }
+    .cf-return-group { flex-direction: column; }
+    .cf-hero { padding: 22px 20px; }
+    .cf-card-body { padding: 18px; }
+}
+

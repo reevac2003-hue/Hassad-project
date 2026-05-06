@@ -1,0 +1,159 @@
+/**
+ * Student report redesign aligned with manager-reports visual language.
+ */
+
+.student-report-redesign {
+    gap: 22px;
+    padding-bottom: 10px;
+}
+
+.student-report-redesign .report-section {
+    padding: 22px;
+}
+
+.student-report-redesign .reports-control-panel {
+    border: 2px solid #d9cfbe;
+    background: linear-gradient(135deg, #fffdf8 0%, #f6f0e4 100%);
+}
+
+.student-report-redesign .report-control-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e5dccb;
+}
+
+.student-report-redesign .control-note {
+    margin: 4px 0 0;
+    color: #45644a;
+    font-size: 0.9rem;
+}
+
+.student-report-redesign .control-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-report-redesign .control-date {
+    font-size: 0.82rem;
+    color: #45644a;
+    background: #fff;
+    border: 1px solid #ddd0b7;
+    border-radius: 999px;
+    padding: 6px 10px;
+}
+
+.student-report-redesign .student-tabs-filter {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 12px;
+}
+
+.student-report-redesign .student-tabs-filter .filter-btn {
+    border-radius: 999px;
+    border: 1px solid #d7cebd;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: #ececec;
+    color: #2a4434;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.student-report-redesign .student-tabs-filter .filter-btn:hover {
+    background: #e2dfd8;
+}
+
+.student-report-redesign .student-tabs-filter .filter-btn.active {
+    background: linear-gradient(135deg, #18442a 0%, #235535 100%);
+    border-color: #18442a;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(24, 68, 42, 0.18);
+}
+
+.student-report-redesign .btn-print {
+    border: 1px solid #d7cebd;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: #18442a;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.student-report-redesign .executive-report-panel {
+    border: 2px solid #e4dbc4;
+    background: linear-gradient(180deg, #ffffff 0%, #fbf8f3 100%);
+}
+
+.student-report-redesign .executive-report-panel .section-title {
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+}
+
+.student-report-redesign .executive-table-wrap {
+    border: 1px solid #d7cebd;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.student-report-redesign .executive-table {
+    margin: 0;
+    min-width: 860px;
+}
+
+.student-report-redesign .executive-table th,
+.student-report-redesign .executive-table td {
+    border-bottom: 1px solid #ece8de;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.student-report-redesign .executive-table th {
+    background: #f1ecdf;
+    color: #18442a;
+    font-weight: 700;
+}
+
+.student-report-redesign .report-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.student-report-redesign .report-actions .cta-primary,
+.student-report-redesign .report-actions .cta-secondary {
+    min-width: 180px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .student-report-redesign .report-control-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .student-report-redesign .control-tools {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .student-report-redesign .student-tabs-filter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .student-report-redesign .student-tabs-filter {
+        grid-template-columns: 1fr;
+    }
+}

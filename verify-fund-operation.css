@@ -1,0 +1,67 @@
+﻿/**
+ * Page-specific styles for verify-fund-operation.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+.verify-operation-page { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+.page-header { margin-bottom: 25px; }
+.back-link { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; }
+.page-header h1 { margin: 10px 0 5px; font-size: 1.8rem; color: #ffffff; }
+.page-header p { color: rgba(255,255,255,0.75); margin: 0; }
+
+.alert { padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; }
+.alert-success { background: #d4edda; color: #155724; }
+.alert-error { background: #f8d7da; color: #721c24; }
+
+.verify-container { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+
+.operation-details, .verification-form-section { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.operation-details h2, .verification-form-section h2 { margin: 0 0 20px; font-size: 1.2rem; }
+
+.details-card { margin-bottom: 20px; }
+.detail-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; }
+.detail-row:last-child { border-bottom: none; }
+.detail-row .label { color: #666; }
+.detail-row .value { font-weight: 500; }
+.operation-type { color: #b8860b; font-weight: 600; }
+
+.security-notice { display: flex; gap: 15px; padding: 15px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107; }
+.notice-icon { font-size: 1.5rem; }
+.notice-text strong { display: block; margin-bottom: 5px; color: #856404; }
+.notice-text p { margin: 0; color: #856404; font-size: 0.9rem; }
+
+.verification-form { display: flex; flex-direction: column; gap: 25px; }
+
+.code-input-group { text-align: center; }
+.code-input-group label { display: block; margin-bottom: 15px; font-weight: 500; }
+.code-inputs { display: flex; justify-content: center; gap: 12px; }
+.code-digit { width: 55px; height: 65px; text-align: center; font-size: 1.8rem; font-weight: 600; border: 2px solid #ddd; border-radius: 10px; }
+.code-digit:focus { border-color: #b8860b; outline: none; }
+
+.code-info { text-align: center; color: #666; font-size: 0.9rem; }
+.code-info p { margin: 5px 0; }
+.timer { color: #dc3545; font-weight: 500; }
+
+.form-actions { text-align: center; }
+.btn-verify { padding: 15px 40px; background: linear-gradient(135deg, #28a745, #20c997); color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 500; }
+.btn-verify:hover { box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3); }
+
+.resend-section { text-align: center; padding-top: 15px; border-top: 1px solid #eee; }
+.resend-section p { margin: 0 0 10px; color: #666; font-size: 0.9rem; }
+.btn-resend { padding: 10px 20px; background: white; border: 2px solid #1a237e; color: #1a237e; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+.btn-resend:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.help-section { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.help-section h3 { margin: 0 0 20px; font-size: 1.1rem; }
+.help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.help-item { padding: 15px; background: #f8f9fa; border-radius: 8px; }
+.help-item h4 { margin: 0 0 8px; font-size: 0.95rem; color: #1a237e; }
+.help-item p { margin: 0; color: #666; font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+    .verify-container { grid-template-columns: 1fr; }
+    .help-grid { grid-template-columns: 1fr; }
+    .code-digit { width: 50px; height: 55px; font-size: 1.5rem; }
+}
+

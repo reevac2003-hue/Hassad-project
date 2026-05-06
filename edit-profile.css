@@ -1,0 +1,273 @@
+/*
+ * Professional page styles for edit-profile.php
+ */
+
+.edit-profile-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px;
+    display: grid;
+    gap: 18px;
+}
+
+.ep-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #d8e4d9;
+    background:
+        radial-gradient(circle at top right, rgba(71, 111, 78, 0.12), transparent 52%),
+        linear-gradient(140deg, #f9fcf7 0%, #ffffff 100%);
+    box-shadow: 0 14px 32px rgba(27, 63, 44, 0.08);
+}
+
+.ep-kicker {
+    margin: 0 0 6px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4d6c59;
+    font-weight: 800;
+}
+
+.ep-hero h1 {
+    margin: 0;
+    color: #123423;
+    font-size: 1.65rem;
+}
+
+.ep-hero-copy p {
+    margin: 10px 0 0;
+    color: #577063;
+    max-width: 650px;
+}
+
+.ep-hero-actions {
+    min-width: 210px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ep-card {
+    border: 1px solid #dbe6dc;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(21, 54, 36, 0.07);
+    overflow: hidden;
+}
+
+.ep-card .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #e8efe8;
+    background: linear-gradient(180deg, #f8fbf8 0%, #ffffff 100%);
+}
+
+.ep-card .card-header h2 {
+    margin: 0;
+    color: #143725;
+    font-size: 1.12rem;
+}
+
+.ep-card .card-header p {
+    margin: 0;
+    color: #607668;
+    font-size: 0.9rem;
+}
+
+.profile-form {
+    padding: 18px 20px 20px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.form-grid.two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field.full-width {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    color: #2b4537;
+    font-weight: 700;
+    font-size: 0.87rem;
+}
+
+.text-input,
+.select-input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #cbdccf;
+    border-radius: 12px;
+    padding: 0 12px;
+    background: #fff;
+    color: #173227;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-input:focus,
+.select-input:focus {
+    border-color: #2d6e4a;
+    box-shadow: 0 0 0 4px rgba(45, 110, 74, 0.12);
+}
+
+.text-input[disabled] {
+    background: #f5f8f5;
+    color: #617365;
+}
+
+.field-hint,
+.helper-text {
+    margin-top: 6px;
+    display: block;
+    color: #6b7e70;
+    font-size: 0.78rem;
+}
+
+.ep-form-actions {
+    margin-top: 18px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.ep-form-actions .btn-secondary,
+.ep-form-actions .cta-primary {
+    min-width: 184px;
+    height: 56px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.alert {
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    color: #125732;
+    background: #e3f6e9;
+    border: 1px solid #b7e3c5;
+}
+
+.alert-error {
+    color: #7b2020;
+    background: #fdeaea;
+    border: 1px solid #f0bcbc;
+}
+
+.hint-list.password-checklist {
+    margin: 0;
+    padding: 12px 14px;
+    display: grid;
+    gap: 6px;
+    list-style: none;
+    border: 1px solid #dce7de;
+    border-radius: 12px;
+    background: #fbfdfb;
+}
+
+.req-item {
+    font-size: 0.82rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 18px;
+}
+
+.req-item::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.req-pending {
+    color: #8b5f22;
+}
+
+.req-met {
+    color: #1d6a3f;
+}
+
+.forgot-password-link {
+    margin-top: 8px;
+    display: inline-block;
+    color: #38644b;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.ep-password-form .form-grid.two-col {
+    align-items: start;
+}
+
+.ep-password-form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ep-password-form .text-input {
+    height: 58px;
+}
+
+.ep-password-form .field:nth-child(4) {
+    align-self: stretch;
+}
+
+.ep-password-form .helper-text {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #2b4537;
+}
+
+@media (max-width: 960px) {
+    .edit-profile-page {
+        padding: 14px;
+    }
+
+    .ep-hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ep-hero-actions {
+        justify-content: flex-start;
+    }
+
+    .form-grid.two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .ep-form-actions {
+        flex-direction: column;
+    }
+
+    .ep-form-actions a,
+    .ep-form-actions button {
+        width: 100%;
+    }
+}

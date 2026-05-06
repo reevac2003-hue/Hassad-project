@@ -1,0 +1,289 @@
+/**
+ * Page-specific styles for contracts.php.
+ * Professional contracts dashboard layout and readable contract table design.
+ */
+
+.clean-dashboard {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.report-header-clean {
+    background: linear-gradient(140deg, #18442a 0%, #2f5d41 62%, #45644a 100%);
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 12px 34px rgba(24, 68, 42, 0.22);
+}
+
+.page-title-clean {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.9rem;
+    font-weight: 800;
+}
+
+.page-subtitle-clean {
+    margin: 8px 0 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.97rem;
+}
+
+.contracts-page-tagline {
+    margin-top: 12px;
+    color: rgba(228, 219, 196, 0.95);
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.stats-section-clean {
+    margin-bottom: 20px;
+}
+
+.clean-dashboard .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.clean-dashboard .stats-grid.stats-grid--student {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card-clean {
+    background: #ffffff;
+    border: 1px solid rgba(24, 68, 42, 0.14);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(24, 68, 42, 0.08);
+}
+
+.clean-dashboard .stat-card-clean {
+    min-height: 100px;
+}
+
+.stat-icon-clean {
+    min-width: 106px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f3ede3;
+    color: #18442a;
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.stat-content-clean {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-label-clean {
+    font-size: 0.82rem;
+    color: #6a756d;
+    font-weight: 700;
+}
+
+.stat-value-clean {
+    font-size: 1.55rem;
+    color: #18442a;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.funds-section-clean {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(24, 68, 42, 0.12);
+    box-shadow: 0 8px 24px rgba(24, 68, 42, 0.08);
+    padding: 18px 18px 10px;
+}
+
+.section-title-clean {
+    margin: 0 0 14px;
+    color: #18442a;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.portfolio-table-clean {
+    overflow: auto;
+}
+
+.portfolio-table-clean table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 940px;
+    table-layout: fixed;
+}
+
+.portfolio-table-clean table.contracts-table-student {
+    min-width: 900px;
+}
+
+.portfolio-table-clean table.contracts-table-manager {
+    min-width: 1180px;
+}
+
+.portfolio-table-clean table.contracts-table-student col.col-contract { width: 10%; }
+.portfolio-table-clean table.contracts-table-student col.col-fund { width: 21%; }
+.portfolio-table-clean table.contracts-table-student col.col-manager { width: 22%; }
+.portfolio-table-clean table.contracts-table-student col.col-amount { width: 15%; }
+.portfolio-table-clean table.contracts-table-student col.col-description { width: 32%; }
+
+.portfolio-table-clean table.contracts-table-manager col.col-contract { width: 9%; }
+.portfolio-table-clean table.contracts-table-manager col.col-fund { width: 14%; }
+.portfolio-table-clean table.contracts-table-manager col.col-amount { width: 12%; }
+.portfolio-table-clean table.contracts-table-manager col.col-student { width: 14%; }
+.portfolio-table-clean table.contracts-table-manager col.col-student-id { width: 9%; }
+.portfolio-table-clean table.contracts-table-manager col.col-manager { width: 15%; }
+.portfolio-table-clean table.contracts-table-manager col.col-license { width: 8%; }
+.portfolio-table-clean table.contracts-table-manager col.col-description { width: 19%; }
+
+.portfolio-table-clean thead th {
+    position: sticky;
+    top: 0;
+    background: #f3ede3;
+    color: #18442a;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e4dbc4;
+}
+
+.portfolio-table-clean thead th,
+.portfolio-table-clean tbody td {
+    text-align: center;
+}
+
+.portfolio-table-clean .contracts-table td:nth-child(2),
+.portfolio-table-clean .contracts-table th:nth-child(2),
+.portfolio-table-clean .contracts-table td:last-child,
+.portfolio-table-clean .contracts-table th:last-child {
+    text-align: left;
+}
+
+.portfolio-table-clean tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #edf0ec;
+    color: #2b4432;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+}
+
+.portfolio-table-clean .td-amount {
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+    direction: ltr;
+    font-variant-numeric: tabular-nums;
+}
+
+.portfolio-table-clean .th-amount {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.contract-link-btn {
+    border: 1px solid #d6e2d8;
+    background: #eef5f0;
+    color: #18442a;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.contract-link-btn[aria-expanded="true"] {
+    background: #18442a;
+    color: #fff;
+    border-color: #18442a;
+}
+
+.contract-details-row td {
+    background: #f7faf8;
+}
+
+.contract-details-card {
+    border: 1px solid #dde9df;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 14px;
+}
+
+.contract-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.contract-detail-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: #708077;
+    font-weight: 700;
+}
+
+.contract-details-grid strong,
+.contract-details-description p {
+    color: #18442a;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contract-details-description {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #d4ddd5;
+}
+
+.empty-funds {
+    border: 1px dashed #c8d6cc;
+    background: #f7faf8;
+    border-radius: 12px;
+    padding: 26px;
+    text-align: center;
+    color: #567262;
+    font-weight: 700;
+}
+
+@media (max-width: 960px) {
+    .clean-dashboard {
+        padding: 14px;
+    }
+
+    .clean-dashboard .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contract-details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .report-header-clean {
+        padding: 20px 16px;
+    }
+
+    .page-title-clean {
+        font-size: 1.45rem;
+    }
+
+    .contract-details-grid {
+        grid-template-columns: 1fr;
+    }
+}

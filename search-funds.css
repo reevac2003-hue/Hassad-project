@@ -1,0 +1,125 @@
+﻿/**
+ * Page-specific styles for search-funds.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+.search-funds-page { max-width: 1280px; margin: 0 auto; padding: 24px; }
+.search-funds-page .page-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 20px 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #18442A 0%, #45644A 100%);
+    box-shadow: 0 10px 28px rgba(24, 68, 42, 0.22);
+}
+.search-funds-page .page-title { font-size: 2rem; margin: 0; color: #fff; font-weight: 800; }
+.search-funds-page .page-subtitle { color: rgba(255, 255, 255, 0.92); margin: 8px 0 0; font-size: 1.03rem; }
+
+.search-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(24, 68, 42, 0.08);
+    box-shadow: 0 10px 35px rgba(24, 68, 42, 0.1);
+}
+.search-form { display: flex; flex-direction: column; gap: 18px; }
+.search-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
+.search-row .form-group:nth-child(1) { grid-column: span 4; }
+.search-row .form-group:nth-child(2) { grid-column: span 4; }
+.search-row .form-group:nth-child(3) { grid-column: span 4; }
+.search-row + .search-row .form-group { grid-column: span 3; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-weight: 700; margin-bottom: 6px; font-size: 0.92rem; color: #18442A; }
+.form-input, .form-select {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 14px;
+    border: 1px solid #d8d4c7;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    color: #18442A;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.form-input:focus, .form-select:focus {
+    border-color: #45644A;
+    box-shadow: 0 0 0 3px rgba(69, 100, 74, 0.15);
+}
+.search-actions { display: flex; gap: 12px; justify-content: center; margin-top: 4px; }
+
+.results-section { margin-top: 18px; }
+.results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.results-header h2 { margin: 0; color: #18442A; }
+.results-count { color: #4f5f51; font-size: 0.95rem; }
+
+.funds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.fund-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid rgba(24, 68, 42, 0.08);
+    box-shadow: 0 8px 24px rgba(24, 68, 42, 0.1);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.fund-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(24, 68, 42, 0.15); }
+
+.fund-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; gap: 10px; }
+.fund-title { margin: 0; font-size: 1.16rem; flex: 1; color: #18442A; }
+
+.fund-meta { display: flex; gap: 14px; margin-bottom: 12px; }
+.meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.92rem; color: #4f5f51; }
+
+.fund-description { color: #4f5f51; font-size: 0.92rem; line-height: 1.5; margin-bottom: 12px; }
+
+.fund-investment { background: #f7f6f2; padding: 10px 12px; border-radius: 10px; margin-bottom: 12px; }
+.investment-range { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; gap: 10px; }
+
+.fund-details { display: flex; gap: 16px; margin-bottom: 16px; font-size: 0.85rem; color: #4f5f51; }
+
+.fund-actions { display: flex; gap: 8px; }
+.fund-actions .btn-outline, .fund-actions .btn-gold { flex: 1; text-align: center; padding: 10px; border-radius: 10px; }
+
+.risk-badge { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.risk-low { background: #d4edda; color: #155724; }
+.risk-medium { background: #fff3cd; color: #856404; }
+.risk-high { background: #f8d7da; color: #721c24; }
+
+.empty-state { text-align: center; padding: 50px 20px; background: #fff; border-radius: 14px; border: 1px solid rgba(24, 68, 42, 0.08); }
+.empty-icon { font-size: 3rem; margin-bottom: 10px; }
+.empty-state h3 { margin: 0 0 8px; color: #18442A; }
+.empty-state p { color: #4f5f51; }
+
+.btn-gold {
+    background: linear-gradient(135deg, #b8860b, #d4a62a);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-outline {
+    border: 1px solid #b8860b;
+    color: #9d7409;
+    background: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .search-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .search-row .form-group,
+    .search-row + .search-row .form-group { grid-column: span 1; }
+}
+
+@media (max-width: 640px) {
+    .search-funds-page { padding: 14px; }
+    .search-row { grid-template-columns: 1fr; }
+    .search-actions { flex-direction: column; }
+    .fund-header, .fund-meta, .fund-details { flex-direction: column; gap: 8px; }
+}
+

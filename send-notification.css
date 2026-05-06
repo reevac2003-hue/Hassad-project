@@ -1,0 +1,76 @@
+﻿/**
+ * Page-specific styles for send-notification.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+.notification-page { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+.page-header { margin-bottom: 25px; }
+.back-link { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; }
+.page-header h1 { margin: 10px 0 5px; font-size: 1.8rem; color: #ffffff; }
+.page-header p { color: rgba(255,255,255,0.75); margin: 0; }
+
+.notification-container { display: grid; grid-template-columns: 1fr 350px; gap: 25px; }
+
+.send-section { background: transparent; }
+.sms-form { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; }
+
+.form-section { padding: 25px; }
+.form-section h3 { margin: 0 0 20px; font-size: 1.1rem; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group small { display: block; margin-top: 5px; color: #666; font-size: 0.85rem; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b8860b;
+}
+
+.char-count { text-align: right; font-size: 0.85rem; color: #666; margin-top: 5px; }
+
+.form-actions { padding: 20px 25px; background: #f8f9fa; }
+.btn-send { width: 100%; padding: 14px; background: linear-gradient(135deg, #b8860b, #daa520); border: none; border-radius: 8px; color: white; font-size: 1rem; cursor: pointer; font-weight: 500; }
+.btn-send:hover { box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3); }
+
+.recipients-preview { margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 8px; }
+.recipients-preview h4 { margin: 0 0 10px; font-size: 0.95rem; }
+
+.logs-section { background: transparent; }
+.logs-section h3 { margin: 0 0 15px; font-size: 1.1rem; }
+
+.logs-list { display: flex; flex-direction: column; gap: 10px; }
+.log-item { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.log-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.log-type { font-weight: 600; color: #b8860b; font-size: 0.85rem; }
+.log-status { padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 500; }
+.status-sent { background: #d4edda; color: #155724; }
+.status-pending { background: #fff3cd; color: #856404; }
+.status-failed { background: #f8d7da; color: #721c24; }
+
+.log-content { margin-bottom: 8px; }
+.log-message { margin: 0 0 5px; color: #333; font-size: 0.9rem; }
+.log-recipient { font-size: 0.85rem; color: #666; }
+
+.log-footer { padding-top: 5px; }
+.log-date { font-size: 0.8rem; color: #999; }
+
+.no-logs { text-align: center; padding: 30px; background: white; border-radius: 10px; color: #666; }
+
+@media (max-width: 800px) {
+    .notification-container { grid-template-columns: 1fr; }
+    .logs-section { order: -1; }
+}
+

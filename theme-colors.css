@@ -1,0 +1,14 @@
+﻿/* HASSAD THEME COLORS */
+/* Colors: #18442A #45644A #E4DBC4 #F3EDE3 #FFFFFF #000000 */
+
+:root {
+    --color-primary-dark: #18442A;
+    --color-primary-light: #45644A;
+    --color-accent-warm: #E4DBC4;
+    --color-background: #F3EDE3;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gold: #b8860b;
+    --color-gold-light: #daa520;
+    --font-family: 'Tajawal', sans-serif;
+}

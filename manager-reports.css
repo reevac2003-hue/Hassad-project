@@ -1,0 +1,410 @@
+﻿/**
+ * Page-specific styles for manager-reports.php.
+ * Extracted from inline CSS to keep templates clean and maintainable.
+ */
+
+.manager-reports-redesign {
+    gap: 16px;
+}
+
+.reports-control-panel {
+    border: 2px solid #d9cfbe;
+    background: linear-gradient(135deg, #fffdf8 0%, #f6f0e4 100%);
+}
+
+.report-control-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5dccb;
+}
+
+.report-control-head .section-title {
+    margin: 0;
+}
+
+.control-note {
+    margin: 4px 0 0;
+    color: #45644a;
+    font-size: 0.9rem;
+}
+
+.control-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-date {
+    font-size: 0.82rem;
+    color: #45644a;
+    background: #fff;
+    border: 1px solid #ddd0b7;
+    border-radius: 999px;
+    padding: 6px 10px;
+}
+
+.reports-master-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.reports-master-filter .filter-btn {
+    border-radius: 999px;
+    border-width: 1px;
+    padding: 8px 14px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.reports-master-filter .filter-btn.active {
+    background: #18442a;
+    color: #fff;
+    border-color: #18442a;
+}
+
+.transactions-subtitle {
+    margin: 4px 0 0;
+    color: #45644a;
+    font-size: 0.86rem;
+}
+
+.transactions-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 14px 0 16px;
+}
+
+.transactions-kpi {
+    background: #fff;
+    border: 1px solid #e5dccb;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.transactions-kpi .kpi-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #45644a;
+    margin-bottom: 5px;
+}
+
+.transactions-kpi .kpi-value {
+    font-size: 1rem;
+    color: #18442a;
+}
+
+.transactions-kpi .kpi-value.danger {
+    color: #9b2d20;
+}
+
+.executive-report-panel {
+    border: 2px solid #e4dbc4;
+    background: linear-gradient(180deg, #ffffff 0%, #fbf8f3 100%);
+}
+
+.executive-sub-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 0 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px dashed #d9cfbe;
+}
+
+.executive-sub-filter .filter-btn {
+    border-radius: 999px;
+    border-width: 1px;
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+.executive-sub-filter .filter-btn.active {
+    background: #45644a;
+    color: #fff;
+    border-color: #45644a;
+}
+
+.executive-report-panel .section-title {
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+}
+
+.executive-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.executive-card {
+    border: 1px solid #d7cebd;
+    border-radius: 10px;
+    padding: 12px;
+    background: #fff;
+}
+
+.executive-card h4 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+}
+
+.executive-card.full-width {
+    margin-top: 14px;
+}
+
+.executive-table-wrap {
+    border: 1px solid #d7cebd;
+    border-radius: 8px;
+}
+
+.executive-table {
+    margin: 0;
+}
+
+.executive-table th,
+.executive-table td {
+    border-bottom: 1px solid #ece8de;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+}
+
+.executive-table th {
+    background: #f1ecdf;
+    color: #18442a;
+    font-weight: 700;
+}
+
+.executive-table.compact th,
+.executive-table.compact td {
+    padding: 9px 10px;
+}
+
+.executive-total-row td {
+    background: #f9f5ea;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .report-control-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .control-tools {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .transactions-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .executive-grid-two {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .transactions-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Executive Summary KPI cards ── */
+.exec-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+}
+.exec-kpi-card {
+    background: #fff;
+    border: 1px solid #e4e0d4;
+    border-radius: 12px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exec-kpi-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #888;
+}
+.exec-kpi-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2a1e;
+}
+.exec-kpi-value.exec-pos { color: #2e7d32; }
+.exec-kpi-value.exec-neg { color: #c0392b; }
+.exec-kpi-sub {
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* ── Executive period cards ── */
+.exec-period-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.exec-period-card {
+    background: #faf9f4;
+    border: 1px solid #e4e0d4;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+.exec-period-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.exec-period-ref { font-size: 12px; color: #888; }
+.exec-period-type { font-weight: 600; color: #333; }
+.exec-period-risk {
+    margin-left: auto;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.exec-risk-low    { background: #e8f5e9; color: #2e7d32; }
+.exec-risk-medium { background: #fff3e0; color: #e65100; }
+.exec-risk-high   { background: #fce4ec; color: #c62828; }
+.exec-risk-balanced { background: #e3f2fd; color: #1565c0; }
+
+.exec-period-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+.exec-period-body > div {
+    display: flex; flex-direction: column; gap: 2px;
+}
+.exec-period-body span { font-size: 11px; color: #888; }
+.exec-period-body strong { font-size: 14px; color: #222; }
+.exec-period-body strong.exec-pos { color: #2e7d32; }
+.exec-period-body strong.exec-neg { color: #c0392b; }
+
+/* ── Funds section header ── */
+.rpt-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.fund-card-status {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.fund-status-published { background: #e8f5e9; color: #2e7d32; }
+.fund-status-draft     { background: #f3f3ee; color: #666; }
+.fund-status-pendingapproval { background: #fff3e0; color: #e65100; }
+.rpt-empty { color: #888; font-style: italic; padding: 20px 0; }
+.rpt-count { font-size: 13px; color: #888; }
+
+/* ── Investors section ── */
+.investor-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+.investor-search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.investor-search-input {
+    padding: 7px 14px;
+    border: 1px solid #d6d0c4;
+    border-radius: 8px;
+    font-size: 13px;
+    min-width: 220px;
+    background: #fff;
+}
+.investor-search-input:focus {
+    outline: none;
+    border-color: #45644a;
+}
+.investor-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.investor-card {
+    background: #fff;
+    border: 1px solid #e4e0d4;
+    border-radius: 12px;
+    padding: 18px;
+}
+.investor-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.investor-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: #45644a;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.investor-name { font-size: 15px; font-weight: 600; color: #1a2a1e; margin: 0 0 4px; }
+.investor-info-list { display: flex; flex-direction: column; gap: 6px; }
+.investor-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px solid #f0ece4;
+}
+.investor-info-row:last-child { border-bottom: none; }
+.investor-info-row span { color: #888; }
+.investor-info-row strong { color: #222; }
+
+@media (max-width: 680px) {
+    .exec-kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .exec-period-body { grid-template-columns: repeat(2, 1fr); }
+    .investor-filter-bar { flex-direction: column; align-items: flex-start; }
+}
+
+@media print {
+    .reports-page > section:not(.executive-report-panel):not(.report-actions) {
+        display: none !important;
+    }
+
+    .executive-report-panel {
+        box-shadow: none;
+        border-color: #cfc6b4;
+    }
+}
+
